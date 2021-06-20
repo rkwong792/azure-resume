@@ -36,7 +36,7 @@ https://www.youtube.com/watch?v=ieYrBWmkfno
     "Values": {
       "AzureWebJobsStorage": "",
       "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-      "AzureResumeConnectionString": "AccountEndpoint=https://azure-resume-project.documents.azure.com:443/;AccountKey=2l46GERFmpjbUwBQlyfgMt05DIUClo6t44xemjqQg6jK8H5zWJaiS4XMiOh45J4OOWyrJ1NRsRej8C5kYA77Ug==;"
+      "AzureResumeConnectionString": ""
     },
     "Host": 
     {
@@ -45,4 +45,4 @@ https://www.youtube.com/watch?v=ieYrBWmkfno
   }
 
   - Website uploaded to Azure Blob Storage
-  - https://azureresume1.z13.web.core.windows.net/
+ 
