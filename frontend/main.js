@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 });
 
-const functionApi = '';
+const functionApi = 'http://localhost:7071/api/GetResumeCounter';
 //Grab the JSON from that API above
 //Grab the correct part of the JSON and show it in our HTML
 

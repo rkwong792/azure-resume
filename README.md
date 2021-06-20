@@ -1,3 +1,27 @@
+HTML/CSS -> Javascript (main.js) -> Azure Function (GetResumeCounter.cs) -> Azure Cosmos DB
+
+# Azure Cosmos DB:
+- Resource Group: azureresume-rg
+- Account Name: azureresume-act
+- Capacity Mode = Serverless
+- Database Name = AzureResume
+- Container id: Counter
+- Partition key: /id
+- {
+  "id":"1",
+  "count":0
+}
+- AzureResumeConnectionString = Primary Connection String from Azure Cosmos DB Account
+
+
+# Add Azure Cosmos DB bindings for Azure Functions
+https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2
+
+C# Lanuage, Add by... -> Installing NuGet package in your /api directory
+.NET CLI -> https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.CosmosDB
+Run the command in backend/api
+
+
 # azure-resume
 https://www.youtube.com/watch?v=ieYrBWmkfno
 
