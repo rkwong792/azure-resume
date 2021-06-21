@@ -26,17 +26,18 @@ Run the command in backend/api
 - Function Name: AzureResumeFunctionApp
 - Storage Account: azureresumestorage0
 - App Insights: azureresumeappinsights
+- NOTE: Under Azure Functions Extension, you don't need to have the "Local Projects' director opened. Every all the files are ready to be deployed, click 'Deploy to Function App'. If the function app is already deployed, clean out everything again, right click your existing function app and click 'Deploy to Function App'
 - After Azure Function App is deployed, update the Functions Secrets in the portal
   - Go to your Function App in Azure portal, click on Configuration
   - Add AzureResumeConnectionString annd Value (Cosmos DB Primary Connection String)
-  - Get Function URL: https://azureresumefunctionapp.azurewebsites.net/api/GetResumeCounter?code=/DEwLan0sLByJJwYQx2fguer8URrYS/4aGEgO4w9bnL2Zm4Gs7Nq1w==
+  - Get Function URL: https://azureresumefunctionapp1.azurewebsites.net/api/GetResumeCounter?code=cFhxvlw9uAphBJq5Ro1oyMdKWbGpb/ZgJOarV9OgPagxcAoobY1SpA==
   - Enable CORS in Azure Portal
   - Need to add domain name into "Allowed Origins" under CORS section
 
   # Deploy to static website via Azure Storage
   - Storage Account: azureresumesa
   - Resource Group: azureresume-rg
-  - Blob Storage Website URL : https://azureresumesa.z13.web.core.windows.net/
+  - Blob Storage Website URL : https://azureresumestorage3.z13.web.core.windows.net/
   - Paste our url into the CORS section under 'Allowed Origins'
 
 # azure-resume
