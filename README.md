@@ -21,6 +21,17 @@ C# Lanuage, Add by... -> Installing NuGet package in your /api directory
 .NET CLI -> https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.CosmosDB
 Run the command in backend/api
 
+# Create Azure Function
+- Under Azure Functions extension, Click "Deploy to function app"
+- Function Name: AzureResumeFunctionApp
+- Storage Account: azureresumestorage0
+- App Insights: azureresumeappinsights
+- After Azure Function App is deployed, update the Functions Secrets in the portal
+  - Go to your Function App in Azure portal, click on Configuration
+  - Add AzureResumeConnectionString annd Value (Cosmos DB Primary Connection String)
+  - Get Function URL: https://azureresumefunctionapp.azurewebsites.net/api/GetResumeCounter?code=/DEwLan0sLByJJwYQx2fguer8URrYS/4aGEgO4w9bnL2Zm4Gs7Nq1w==
+  - Enable CORS in Azure Portal
+  - Need to add domain name into "Allowed Origins" under CORS section
 
 # azure-resume
 https://www.youtube.com/watch?v=ieYrBWmkfno
