@@ -31,7 +31,7 @@ namespace Company.Function
 
             var jsonToReturn = JsonConvert.SerializeObject(counter);
 
-            return new HttpResponseMessage(HttpStatusCode.OK)
+            return new HttpResponseMessage(System.Net.HttpStatusCode.OK)
             {
                 Content = new StringContent(jsonToReturn, Encoding.UTF8, "application/json")
             };

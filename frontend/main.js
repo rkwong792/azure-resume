@@ -12,7 +12,7 @@ const localFunctionApi = 'http://localhost:7071/api/GetResumeCounter';
 //Set our HTML's innerText with the count we got from the JSON response from the API
 const getVisitCount = () => {
     let count = 30;
-    fetch(prodFunctionApi)
+    fetch(localFunctionApi)
     .then(response => {
         return response.json()
     })

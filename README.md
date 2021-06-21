@@ -33,6 +33,12 @@ Run the command in backend/api
   - Enable CORS in Azure Portal
   - Need to add domain name into "Allowed Origins" under CORS section
 
+  # Deploy to static website via Azure Storage
+  - Storage Account: azureresumesa
+  - Resource Group: azureresume-rg
+  - Blob Storage Website URL : https://azureresumesa.z13.web.core.windows.net/
+  - Paste our url into the CORS section under 'Allowed Origins'
+
 # azure-resume
 https://www.youtube.com/watch?v=ieYrBWmkfno
 
