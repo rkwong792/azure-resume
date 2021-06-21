@@ -40,6 +40,12 @@ Run the command in backend/api
   - Blob Storage Website URL : https://azureresumestorage3.z13.web.core.windows.net/
   - Paste our url into the CORS section under 'Allowed Origins'
 
+  # Create Azure CDN
+  - Select Storage Account azureresumestorage3
+  - Create new CDN profile - azureresumerichard
+  - The CDN Endpoint Hostname https://azureresumerichard.azureedge.net that's created here won't work at first because the CORS was only enabled for the blog storage URL (above).
+  - CURRENT STEP: Changed the CNAME record to point to the new CDN Endpoint in Google domains. Waiting to see what happens. Also need to add the custom hostname into the CDN Endpoint on Azure.
+
 # azure-resume
 https://www.youtube.com/watch?v=ieYrBWmkfno
 
