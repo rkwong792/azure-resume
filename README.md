@@ -45,6 +45,24 @@ Run the command in backend/api
   - Create new CDN profile - azureresumerichard
   - The CDN Endpoint Hostname https://azureresumerichard.azureedge.net that's created here won't work at first because the CORS was only enabled for the blog storage URL (above).
   - CURRENT STEP: Changed the CNAME record to point to the new CDN Endpoint in Google domains. Waiting to see what happens. Also need to add the custom hostname into the CDN Endpoint on Azure.
+  - https://www.youtube.com/watch?v=ieYrBWmkfno : 1:02:30
+
+  - What to do with the CDN Endpoint? https://azureresumerichard.azureedge.net/
+
+  - Steps:
+  Create a CNAME DNS record.
+    - Create a CDN Profile - DONE - azureresumerichard
+    - Create a CDN Endpoint - DONE -  https://azureresumerichard.azureedge.net/
+    - Map the temporary cdnverify subdomain - DONE
+    - Enable custom domain HTTPS under CDN Endpoint - DONE
+    - Add https://www.richardkwong.me url to CORs in Azure Function.
+    - Map the permanent customer domain - NOT DONE
+    - https://docs.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup
+
+  Associate the custom domain with your CDN endpoint.
+  Verify the custom domain.
+
+
 
 # azure-resume
 https://www.youtube.com/watch?v=ieYrBWmkfno
