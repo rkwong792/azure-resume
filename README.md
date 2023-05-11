@@ -112,3 +112,8 @@ https://www.youtube.com/watch?v=ieYrBWmkfno
 
   - Website uploaded to Azure Blob Storage
  
+ ## Re-deploying frontend folder
+ 1. Right click the "frontend" folder and select "Deploy to static website via Azure Storage"
+ 2. Select the resource/storage account "azureresumestorage3"
+ 3. Click confirm to delete and re-upload files to the blob storage.
+ 4. If new HTML changes are not reflected, go under storage accounts -> Azure CDN -> select your hostname -> Purge. (https://learn.microsoft.com/en-us/azure/cdn/cdn-purge-endpoint)
