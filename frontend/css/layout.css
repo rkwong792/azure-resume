@@ -15,6 +15,8 @@
    g. Testimonials Section
    h. Contact Section
    i. Footer
+   j. Blog
+   k. Gallery
 
 ===================================================================== */
 
@@ -1004,3 +1006,72 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
+
+/* ------------------------------------------------------------------ */
+/* j. Blog Section
+/* ------------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------------ */
+/* k. Gallery Section
+/* ------------------------------------------------------------------ */
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f0f0f0;
+   margin: 0;
+   padding: 0;
+}
+
+#gallery {
+   padding: 20px;
+}
+
+h2 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.gallery {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.gallery-item {
+   margin: 10px;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+   transform: scale(1.05);
+}
+
+img {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+/* Offset sizes for gallery items */
+.gallery-item:nth-child(odd) {
+   width: 220px; /* Small */
+}
+
+.gallery-item:nth-child(even) {
+   width: 300px; /* Medium */
+}
+
+.gallery-item:nth-child(3n) {
+   width: 400px; /* Large */
+}
+
+/* Full width style */
+.full-width {
+   flex-basis: 100%; /* Full width */
+   margin: 10px 0; /* Adjust margin as needed */
+}
