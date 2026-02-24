@@ -1009,56 +1009,65 @@ footer .social-links li:first-child { margin-left: 0; }
 
 
 /* ------------------------------------------------------------------ */
-/* j. Blog Section
+/* j. Projects Section
 /* ------------------------------------------------------------------ */
 
-#blog {
+#projects {
    background: #2B2B2B;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
 }
 
-#blog a, #blog a:visited  { color: #fff; }
-#blog a:hover, #blog a:focus { color: #11ABB0; }
-
-#blog h2 {
+#projects h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
    color: #fff;
-   margin-bottom: 12px;
-}
-#blog p {
-   line-height: 30px;
-   color: #7A7A7A;
-}
-#blog .profile-pic {
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
-}
-#blog .contact-details { width: 41.66667%; }
-#blog .download {
-   width: 58.33333%;
-   padding-top: 6px;
-}
-#blog .main-col { padding-right: 5%; }
-#blog .download .button {
-   margin-top: 6px;
-   background: #444;
-}
-#blog .download .button:hover {
-   background: #fff;
-   color: #2B2B2B;
-}
-#blog .download .button i {
-   margin-right: 15px;
-   font-size: 20px;
+   margin-top: 0;
+   margin-bottom: 45px;
 }
 
-#blog h3 {
-   color: #FFFFFF;
-   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+.project-card {
+   background: #383838;
+   border: 1px solid #4a4a4a;
+   border-top: 3px solid #11ABB0;
+   border-radius: 6px;
+   padding: 24px;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.4), 0 8px 20px rgba(0,0,0,0.3);
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+.project-card:hover {
+   background: #3f3f3f;
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0,0,0,0.5), 0 16px 40px rgba(0,0,0,0.35);
+}
+.project-card h3 {
+   margin: 0;
+   font-size: 18px;
+}
+.project-card h3 a {
+   color: #fff;
+}
+.project-card h3 a:hover {
+   color: #11ABB0;
+}
+.project-card p {
+   margin: 0;
+   color: #9a9a9a;
+   flex-grow: 1;
+   line-height: 24px;
+}
+.project-meta {
+   display: flex;
+   gap: 16px;
+   font-size: 13px;
+   color: #11ABB0;
+}
+.project-card .button {
+   align-self: flex-start;
+   margin-top: 8px;
 }
 
 
