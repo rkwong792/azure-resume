@@ -24,18 +24,22 @@ const getGithubProjects = () => {
                 container.innerHTML = '<p>No projects found.</p>';
                 return;
             }
-            filtered.forEach(repo => {
-                const card = document.createElement('div');
-                card.className = 'project-card';
-                card.innerHTML =
-                    `<h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>` +
-                    `<p>${repo.description || 'No description provided.'}</p>` +
-                    `<div class="project-meta">` +
-                        (repo.language ? `<span>${repo.language}</span>` : '') +
-                        `<span>&#9733; ${repo.stargazers_count}</span>` +
-                    `</div>` +
-                    `<a href="${repo.html_url}" target="_blank" class="button">View on GitHub</a>`;
-                container.appendChild(card);
+            Promise.all(filtered.map(repo =>
+                fetch(repo.languages_url).then(r => r.json()).catch(() => ({}))
+            )).then(languagesList => {
+                filtered.forEach((repo, i) => {
+                    const languages = Object.keys(languagesList[i]);
+                    const card = document.createElement('div');
+                    card.className = 'project-card';
+                    card.innerHTML =
+                        `<h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>` +
+                        `<p>${repo.description || 'No description provided.'}</p>` +
+                        `<div class="project-meta">` +
+                            (languages.length ? languages.map(l => `<span>${l}</span>`).join('') : '') +
+                        `</div>` +
+                        `<a href="${repo.html_url}" target="_blank" class="button">View on GitHub</a>`;
+                    container.appendChild(card);
+                });
             });
         })
         .catch(() => {
