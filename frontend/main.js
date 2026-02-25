@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getGithubProjects();
 });
 
-const prodFunctionApi = 'https://azureresumefunctionapp1.azurewebsites.net/api/GetResumeCounter?code=cFhxvlw9uAphBJq5Ro1oyMdKWbGpb/ZgJOarV9OgPagxcAoobY1SpA==';
+const prodFunctionApi = 'https://azureresumefunctionapp1.azurewebsites.net/api/GetResumeCounter?code=fn_rtzpoY_c7n2WRJgyDXLLSR1sISFNfZM0cYNj6uZMMAzFupLXQww==';
 const localFunctionApi = 'http://localhost:7071/api/GetResumeCounter';
 //Grab the JSON from that API above
 //Grab the correct part of the JSON and show it in our HTML
